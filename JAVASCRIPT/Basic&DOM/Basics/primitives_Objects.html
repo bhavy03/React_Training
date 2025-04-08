@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 4;
+        let b = 342;
+        let c = Symbol("i am a nice symbol");
+        let d = "bhavya";
+        let e = true;
+        let f = BigInt("324") + BigInt("6");
+        let g = undefined;
+        console.log(a, b, c, d, e, f, g);
+        console.log(typeof a)
+        
+        // Non Primitive Data Type - Objects in Js
+        const item = {
+            "Harry": true,
+            "Shubh": false,
+            "Lovish": 67,
+            "Rohan": undefined
+        }
+        // item = 34;   can't do this not any type of datatype
+        // but do this
+        item['friend'] = "lovish";
+        console.log(item)
+        let h = "harry";
+        let i = 6;
+        console.log(item["Shubh"]);
+        //or do this
+        console.log(item.Shubh);
+        console.log(h+i);
+        console.log(typeof(h+i));
+
+        // now in null we can't insert a value whereas in empty object we can insert a value
+    </script>
+</head>
+
+<body>
+    <pre>
+    there are seven type of primitive datatypes in javascript
+    nn bb ss u
+    null
+    number
+    symbol
+    string
+    boolean
+    bigInt
+    undefined
+</pre>
+</body>
+
+</html>

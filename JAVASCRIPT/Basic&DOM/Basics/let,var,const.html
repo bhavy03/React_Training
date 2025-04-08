@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(3);
+        let a = 2;
+        console.log(a);
+        a = "harry";
+        console.log(a);
+        const b= 23;
+        console.log(b);
+
+        const player = "bobby";
+        let experience = 100;
+        let wizardlevel = false;
+        if(experience >90){
+            let wizardlevel = true;
+            console.log("inside",wizardlevel);
+            // here let and const will create their own scope but var doesn't
+            // result of var is both true
+        }
+        console.log("outside",wizardlevel)
+
+        const obj={
+            name:"hari",
+            age:34,
+        }
+        // now here the catch is we can't reassign the object
+        // but we can change the value of keys
+    </script>
+</head>
+<body>
+    hello world
+</body>
+</html> 

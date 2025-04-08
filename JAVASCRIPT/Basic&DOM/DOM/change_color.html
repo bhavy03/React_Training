@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function ()/*or ()=>*/ {
+            // document.querySelector('#red').onclick = function () {
+            // document.querySelector('h1').style.color = 'red'
+            // }
+            // document.querySelector('#blue').onclick = function () {
+            // document.querySelector('h1').style.color = 'blue'
+            // }
+            // document.querySelector('#green').onclick = function () {
+            // document.querySelector('h1').style.color = 'green'
+            // }
+
+            // or 
+
+            document.querySelectorAll('button').forEach(function (button) /*foreach(=>*/{
+                button.onclick = function () {
+                    document.querySelector('h1').style.color = button.dataset.color
+                }
+            });
+
+            // for select
+            document.querySelector('select').onchange = function(){
+                document.querySelector('h1').style.color = this.value
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <!-- <button id="red">red</button> -->
+    <!-- <button id="blue">blue</button> -->
+    <!-- <button id="green">green</button> -->
+    <button data-color ="red">red</button>
+    <button data-color="blue">blue</button>
+    <button data-color="green">green</button>
+
+    <select name="" id="option">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+    </select>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    Hello world
+    <script>
+
+        // at first html is requested then css is requested then the browser does something known as DOM
+        // DOM is something a browser creates to allow us to modify the html and css
+        // now javasript engine is the one which reads the javascript line by line
+        // chrome has V8 engine
+        // Edge has chalker core
+        // safari has nitro
+        // firefox has spidermonkey
+        // now the document is the screen we see in broswer and that document is just an object
+        // window is the parent of everything in the browser and describes the browser anytime we use a method
+        // a web browser has a window object that has a property document that specifies what should get displayed 
+        // and to decide what get displayed the document object model reads the HTML and CSS
+        // and then javascript is read line by line something like a javascript engine
+        // and if needs to change anything javascript can speak with the DOM and modify the HTML and CSS
+        // console.log(document)  this is document object model
+        // maybe document didn't look like object but it is, but browser shows us it in this way so that we can play with with it
+
+        // window.console.log(window)
+        // console.log(document.body)
+        // document.body.style.background = "yellow"
+        let runAgain = true;
+
+        const canDrive = (age) => {
+            return age >= 18 ? true : false
+        }
+
+        while (runAgain) {
+            let age = prompt("Enter your age")
+            age = Number.parseInt(age)
+            if (age < 0) {
+                console.error("Please enter a valid age");
+                break;
+            }
+
+            if (canDrive(age)) {
+                alert("Yes you can drive")
+            }
+            else {
+                alert("You cannot drive")
+            }
+            runAgain = confirm("Do you want to play again?")
+            // let number = prompt("Enter your number")
+            // number = Number.parseInt(number)
+
+            // if (number > 4) {
+            //   location.href = "https://google.com"
+            // }
+
+            let color = prompt("Enter the page background color")
+            document.body.style.background = color
+        }
+    </script>
+
+</body>
+
+</html>

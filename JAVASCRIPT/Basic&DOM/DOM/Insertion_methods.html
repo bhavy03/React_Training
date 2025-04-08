@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+</head>
+
+<body>
+    I am start of this container (outer)
+    <div class="container">
+        I am start of this container (inner)
+        <div id="first">I am the first element</div>
+        I am end of this container (inner)
+    </div>
+    I am end of this container (outer)
+
+    <script>
+        let a = document.getElementsByTagName('div')[0]
+        a.innerHTML = a.innerHTML + '<h1>Hello World!</h1>';
+        // it will get inserted after all elements in div
+
+        let div = document.createElement('div');
+        div.innerHTML = '<h1>Hello World!</h1>';
+        // a.append(div);          //here the div goes inside of container and at last
+        // a.prepend(div);         //here the div goes inside of container and at start  
+        a.before(div);             //here div goes outside of container and at begin
+        // a.after(div);           //here div goes outside of container and at last
+        // a.replaceWith(div);     //it will replace the entire div
+    </script>
+
+</body>
+
+</html>

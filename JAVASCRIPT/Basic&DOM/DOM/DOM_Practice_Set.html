@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        nav {
+            display: flex;
+            background: #d5ecec;
+        }
+
+        nav li {
+            list-style: none;
+            padding: 0 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </nav>
+    <table>
+        <td>Hello</td>
+        <tr>Hello 1</tr>
+        <tr>Hello 2</tr>
+        <tr>Hello 3</tr>
+        <tr>Hello 4</tr>
+    </table>
+    <script>
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "green"
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red"
+        document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green"
+
+        Array.from(document.getElementsByTagName("li")).forEach((element) => {
+            element.style.background = "cyan";
+        })
+
+        let user = prompt("Enter S, W or G")
+        let cpuI = Math.floor(Math.random() * 3);
+        // Math.random selects random decimal
+        // we multiply it by three cause that decimal is very small
+        // now Math.floor rounds off that number to nearest integer
+        let cpu = ["S", "W", "G"][cpuI]
+        // here cpuI is the index no. of array swg
+
+        const match = (cpu, user) => {
+            if (cpu === user) {
+                return "Nobody"
+            }
+            else if (cpu === "S" && user === "W") {
+                return "cpu"
+            }
+            else if (cpu === "S" && user === "G") {
+                return "user"
+            }
+            else if (cpu === "G" && user === "W") {
+                return "user"
+            }
+            else if (cpu === "G" && user === "S") {
+                return "cpu"
+            }
+            else if (cpu === "W" && user === "S") {
+                return "user"
+            }
+            else if (cpu === "W" && user === "G") {
+                return "cpu"
+            }
+        }
+        let result = match(cpu, user)
+        document.write(`CPU:${cpu} <br> User:${user} <br>The winner is: ${result.toUpperCase()}`)
+    </script>
+
+</body>
+
+</html>

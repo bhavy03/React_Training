@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const hello = () => {      //we prefer this function syntax
+            console.log("Hey how are you. I am toh fine yaar")
+            return "hi"
+        }
+
+        // there are three ways of writing functions 
+        // 1) Function declaration 
+        // 2) Function expression
+        // 3) Arrow function
+        function onePlusAvg(x, y) {
+            return 1 + (x + y) / 2      //funciton declaration
+        }
+
+        // typeof (onePlusAvg)
+        // 'function'
+        // typeof (onePlusAvg(5, 3))
+        // 'number'
+
+        var sayit = function () {     // but here we can technically write function name after function
+            console.log("hello");     // function expression
+        }      // here we are referencing this function by variable sayit 
+        // and the function doesn't have it's own name so these type of functions
+        // are known as anonymous functions 
+
+        // named function expression 
+        // var b = function xyz(a) {
+        // console.log("Hello");
+        // }
+
+        const sum = (p, q) => {
+            return p + q         // arrow function
+            // return p;
+            // return q;
+            // the above two lines ain't going to run because
+        }
+        // typeof (sum)
+        // 'function'
+        // typeof (sum())
+        // 'number'
+
+        function multiply(a, b) {    // here a and b are parameters 
+            if (a > 10 || b > 10) {
+                return "that's to hard";
+            }
+            else {
+                return a * b;
+            }
+            return a;  // here this doesn't work as one return statement is already invoked in if statement
+        }
+        // in javascript functions act as a variable so it can be passed as argument in another functions
+        // we can do the same process via function expression 
+
+        const fun = (a,
+                     b,
+                     c,
+                     d,
+        ) => console.log(a)
+        fun(a,b,c,d,)
+        // this is also a nice syntax for long parameters
+
+        alert(multiply(3, 4));     // here 3 and 4 are arguments
+        let a = 1;
+        let b = 2;
+        let c = 3;
+        let v = hello();
+        console.log(v)
+        hello()
+        console.log("One plus Average of a and b is ", onePlusAvg(a, b))
+        console.log("One plus Average of b and c is ", onePlusAvg(b, c))
+        console.log("One plus Average of a and c is ", onePlusAvg(a, c))
+        sayit();
+        console.log(sum(9, 7))
+        multiply(4, 20);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
