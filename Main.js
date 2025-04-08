@@ -4,5 +4,5 @@ const obj = {
     console.log(this.name);
   },
 };
-console.log("Hello workd")
+console.log("Hello world")
 obj.greet();
