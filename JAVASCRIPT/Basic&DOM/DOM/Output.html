@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!-- Writing into an HTML element, using innerHTML. -->
+<!-- document.getElementById("demo").innerHTML = 5 + 6; -->
+
+<!-- Writing into the HTML output using document.write(). -->
+<!-- Using document.write() after an HTML document is loaded, will delete all existing HTML: -->
+
+<!-- Writing into an alert box, using window.alert(). -->
+<!-- window.alert(5 + 6); -->
+<!-- You can skip the window keyword. -->
+<!-- In JavaScript, the window object is the global scope object.  -->
+<!-- This means that variables, properties, and methods by default belong to the window object.  -->
+<!-- This also means that specifying the window keyword is optional: -->
+
+<!-- Writing into the browser console, using console.log(). -->
+
+
+<body>
+
+    <h1>My First Web Page</h1>
+    <p>My first paragraph.</p>
+
+    <script>
+        document.write(5 + 6);
+        window.alert(5 + 6);
+    </script>
+    <!-- <button type="button" onclick="document.write(5 + 6)">Try it</button> -->
+    <!-- like here document is loaded then we click on button and it reload it again so it will overwrite -->
+
+    <button onclick="window.print()">Print this page</button>
+    <!-- it will print the current page -->
+</body>
+
+</html>

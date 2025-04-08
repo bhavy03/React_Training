@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let marks = {
+            harry: 90,
+            shubham: 9,
+            lovish: 56,
+            Monika: 4
+        }
+        // Problem No 1
+
+        // iteration by keys
+        // Object.keys(object)
+        // now we can use it as array and can iterate one by one
+        // Object.keys(marks).forEach((keys,index)=>{
+        // console.log(key,obj[key])
+        // })
+
+        // iteration by value
+        // Object.values(marks).forEach(value =>{
+        // console.log(value);
+        // })
+
+        // Object.entries(marks).forEach(value =>{
+        // console.log(value);
+        // })
+        // we can use map,filter,reduce here instead of foreach
+
+        // Object.entries(marks).map(value =>{
+            // return value[1] + value[0].replace('harry','')
+        // })
+
+
+        for (let i = 0; i < Object.keys(marks).length; i++) {
+            console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
+        }
+
+        // Problem No 2
+        for (let key in marks) {
+            // console.log("The marks of " + key + " are " + marks[key])
+        }
+
+        // Problem No 3
+        let cn = 43
+        let i
+        while (i != cn) {
+            console.log("Try again")
+            i = prompt("Enter a number")
+        }
+        console.log("You have entered a correct number")
+
+        // Problem No 4
+        const mean = (a, b, c, d) => {
+            return (a + b + c + d) / 4
+        }
+
+        console.log(mean(4, 5, 6, 7))
+    </script>
+</head>
+
+<body>
+    <h1>
+        Loops and functions practice set
+    </h1>
+</body>
+
+</html>

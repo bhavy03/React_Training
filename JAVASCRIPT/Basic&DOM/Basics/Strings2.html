@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+    String length
+    String slice()
+    let y = new String("John");
+    string is converted to object
+    Comparing two JavaScript objects always returns false.
+    
+    let text = "Apple, Banana, Kiwi";
+    let part = text.slice(7, 13);
+    let part = text.slice(7);
+    let part = text.slice(-12);
+    let part = text.slice(-12, -6);
+    
+    String substring()
+    it will take negative to 0
+    
+    String substr()
+    substr(start, length)
+    
+    String replace()
+    let text = "Please visit Microsoft!";
+    let newText = text.replace("Microsoft", "W3Schools");
+    
+    The replace() method does not change the string it is called on.
+    The replace() method returns a new string.
+    
+    The replace() method replaces only the first match
+    If you want to replace all matches, use a regular expression with the /g flag set. 
+    let newText = text.replace(/Microsoft/g, "W3Schools");
+    
+    To replace case insensitive, use a regular expression with an /i flag (insensitive):
+    let newText = text.replace(/MICROSOFT/i, "W3Schools");
+
+
+    String replaceAll()
+    String toUpperCase()
+    String toLowerCase()
+    String concat()
+    let text1 = "Hello";
+    let text2 = "World";
+    let text3 = text1.concat(" ", text2);
+    
+    String trim()   removes whitespaces
+    String trimStart()   removes whitespaces only from start
+    String trimEnd()     removes whitespaces only from end
+    
+    String padStart()
+    Pad a string with "0" until it reaches the length 4:
+    let text = "5";
+    let padded = text.padStart(4,"0");  => 0005
+    and if value not provided it pads with empty String
+    total space includes the string
+    
+    String padEnd()
+    let numb = 5;
+    let text = numb.toString();
+    let padded = text.padEnd(4,"0");
+
+    String charAt()
+    String charCodeAt()
+    The charCodeAt() method returns the unicode of the character at a specified index in a string:
+    The method returns a UTF-16 code (an integer between 0 and 65535).
+    String split()
+
+    String search
+
+    String indexOf()
+    The indexOf() method returns the index (position) the first occurrence of a string in a string:
+    starting position for the search:
+    let text = "Please locate where 'locate' occurs!";
+    let index = text.indexOf("locate", 15);
+
+    String lastIndexOf()
+    The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+    Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+
+    String search()
+    String match()
+    Perform a global, case-insensitive search for "ain":
+    let text = "The rain in SPAIN stays mainly in the plain";
+    text.match(/ain/gi);
+
+    String matchAll()
+    String includes()
+    The includes() method returns true if a string contains a specified value.
+    Otherwise it returns false.
+
+    String startsWith()
+    The startsWith() method returns true if a string begins with a specified value.
+    Otherwise it returns false
+
+    String endsWith()
+
+    Automatic replacing of variables with real values is called string interpolation.
+    let firstName = "John";
+    let lastName = "Doe";
+    let text = `Welcome ${firstName}, ${lastName}!`;
+
+    'helooo'.includes('o');
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        // document.documentElement will return the HTML
+        // document.title will return the string type
+        // document.head return the head
+        // document.body return the body
+
+        // DOM selectors
+        // document.getElementsByTagName("h1");
+        // document.getElementById("first");
+        // document.getElementsByClassName("second")[0]
+        // now we write [0] here because we may have multiple elements
+        // of same class so we get an array in console and from that we chose
+        // 0th index element
+
+        // document.querySelector("li,h1")
+        // it will select that thing which comes first here it will select h1 as it comes first
+        // and if we write only li then only first li gets selected
+        // document.querySelectorAll("li,h1")
+        // it will select all li's and as well as h1 also
+        // use queryselectors rather than above three
+
+        // document.querySelector("li").getAttribute("random");
+        // document.querySelector("li").setAttribute("random","1000")
+
+        // changing styles
+        // document.querySelector('h1').style.backgroundColor = "yellow";
+        // document.querySelector('h1').className="cool";
+        // or
+        // var a = document.querySelector('h1');
+        // a.className="cool";
+        // document.querySelector("li").classList.add("cool")
+        // document.querySelector("li").classList.remove("cool")
+        // these two also works for first elements only
+        // first.classList.contains("cool")
+        // document.querySelector("li").classList.toggle("cool")
+        // document.querySelector("li").classList.toggle("cool")
+        // we don't need document.querySelector for id 
+        // we can simply write id.classList.add("Class")
+
+        // document.querySelector("h1").innerHTML = "<strong>!!!!</strong>"
+        // document.querySelector("li")[1].parentElement.parentElement.children;
+        // we also have two things known as nextSibling and parentNode
+
+        // in query selection try to assign the query a variable
+
+        // let x = document.getElementsByTagName('span')[0]
+        // console.log(x)
+        // let y = document.getElementsByTagName('span')[0]
+        // console.dir(y)
+        // console.log(document.body.firstChild.nodeName)
+        // console.log(document.body.firstElementChild.nodeName)
+        // const changeBgRed = () => {
+        // document.body.firstElementChild.style.background = "red"
+        // }
+
+        // first.innerHTML
+        // first.innerHTML = "<i>hey I am italic</i>"
+        // first.outerHTML
+        // first.outerHTML = "<div>hey</div>"
+        // document.body.firstChild.data
+        // console.log(document.body.textContent)
+        // first.hidden = false
+
+        // console.log(document.body.firstChild) now here if we provide
+        // space after body then it consider text as it's first child
+        // console.log(document.body.lastChild)
+        // let arr = Array.from(document.body.childNodes)
+        // console.log(arr)
+
+        // let first = document.getElementById("first");
+        // let a = first.getAttribute("class")
+        // console.log(a)
+        // console.log(first.hasAttribute("class"))
+        // console.log(first.hasAttribute("style"))
+        // first.setAttribute("hidden", "true")
+        // first.setAttribute("class", "true sachin")
+        // first.removeAttribute("class")
+        // console.log(first.attributes)
+        // console.log(first.dataset)
+        // console.log(first.dataset.game)
+        // console.log(first.dataset.player)
+    </script>
+</head>
+
+<body>
+    hello world
+    <h1>Shopping list</h1>
+    <p id="first" class="hey" data-game="mario" data-player="harry">Get <b>it</b> done today</p>
+    <p class="second">NO Excuses</p>
+    <ul>
+        <li class="bold red" random="23">Notebook</li>
+        <li>Jello</li>
+        <li>Spinach</li>
+        <li>Rice</li>
+        <li>Birthday cake</li>
+        <li>Candles</li>
+    </ul>
+</body>
+
+</html>

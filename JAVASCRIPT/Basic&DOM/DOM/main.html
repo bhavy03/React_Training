@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello this is the new javascript thing</h1>
+    <h2>0</h2>
+    <!-- <button onclick="hello()">click here</button> -->
+    <!-- <button>click here</button> -->
+    <button onclick="count()">count here</button>
+    <!-- <h2>counter</h2> -->
+    <form action="">
+        <input autofocus type="text" name="" id="name" placeholder="Name">
+        <input type="submit" name="" id="submit">
+    </form>
+
+    <script>
+        function hello() {
+            let counter = localStorage.getItem('counter')
+            counter++
+            document.querySelector('h2').innerHTML = counter
+            localStorage.setItem('counter')
+            if (counter % 10 === 0) {
+                alert(`this is the counter ${counter}`)
+            }
+
+        }
+        let counter = 0
+        function count() {
+            // counter++
+            // alert(counter)
+            // alert("hello world!")
+
+            // document.querySelector('h1').innerHTML='Goodbye!'   
+
+            //it enables us to go through the whole html document and select an specific element and make changes to it 
+            // and if multiple are present then select the first one
+
+            // if (document.querySelector('h1').innerhtml === 'hello this is the new javascript thing') {
+            // document.querySelector('h1').innerhtml = 'Goodbye!';
+            // }
+            // else {
+            // document.querySelector('h1').innerhtml = 'hello';
+            // }
+
+            let heading = document.querySelector('h1')
+            if (heading.innerHTML === 'hello this is the new javascript thing') {
+                heading.innerHTML = 'Goodbye!';
+            }
+            else {
+                heading.innerHTML = 'hello';
+            }
+        }
+        // or we can also do like this
+        // document.querySelector('button').onclick = hello   this didn't work as the DOM is below the written code
+        // so instead we do 
+        document.addEventListener('DOMContentLoaded', function () {       //here we add the event to perform and then the function to load
+            document.querySelector('h1').innerHTML = localStorage.getItem('counter')
+            // document.querySelector('button').onclick = hello
+            document.querySelector('button').addEventListener('click', hello)
+            // setInterval(hello,1000)
+        })
+
+        // document.querySelector('tag')
+        // document.querySelector('#id')
+        // document.querySelector('.class')
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('form').onsubmit = function () {
+                const name = document.querySelector('#name'/*we use id as we have multiple input elements so sidtinguidhing them by id */).value
+                alert(`hello ${name}`)
+            }
+        })
+
+        // Local Storage
+        // localStorage.getItem(key)
+        // localStorage.setItem(key,value)
+
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>click me away</p>
+    <p>click me too</p>
+    <p>JQuery was introduced to make the DOM manipulation easier</p>
+    <p>the disadvantage of this is it makes the language imperative
+        means we have to explain everything one by one
+        one action is dependent on another
+    </p>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+    <!-- <script>cdn of jquery</script> -->
+</body>
+
+</html>

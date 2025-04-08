@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+    The keyword const is a little misleading.
+    It does not define a constant value. It defines a constant reference to a value.
+    let x = "5" + 2 + 3;
+    If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+    let x = 2 + 3 + "5"
+    this will give 55
+
+    for const
+    you can not
+    Reassign a constant value
+    Reassign a constant array
+    Reassign a constant object
+    But you CAN:
+    Change and add the elements of constant array
+    Change and add the properties of constant object
+
+    types of javascript operators 
+    Arithmetic Operators
+    Assignment Operators
+    Comparison Operators
+    String Operators
+    Logical Operators
+    Bitwise Operators
+    Ternary Operators
+    Type Operators
+
+    adding a number and a string will return a string:
+    let z = "Hello" + 5;
+    Hello5
+    When used on strings, the + operator is called the concatenation operator.
+
+    When many operations have the same precedence (like addition and subtraction or multiplication and division), they are computed from left to right:
+
+    JavaScript has 8 Datatypes
+    1. String
+    2. Number
+    3. Bigint
+    4. Boolean
+    5. Undefined
+    6. Null
+    7. Symbol
+    8. Object
+
+    Bigint is used when we go above Number.MAX_SAFE_INTEGER
+    Number.MAX_SAFE_INTEGER = 9007199254740991
+    and want to do some calculation
+    but for the calculations to work we put n after the operands
+    9007199254740991n + 10n
+    
+    The object data type can contain:
+    1. An object
+    2. An array
+    3. A date
+    const date = new Date("2022-03-25");
+
+    let x = 16 + 4 + "Volvo";
+    20Volvo
+    let x = "Volvo" + 16 + 4;
+    Volvo164
+    const square = (x) => x**2
+    means x ki power 2
+
+    if var a is already defined then by writing a in console it give its value but if var a is written only then it gives undefined
+    can use both single and double Quotes for string but thing to notice is output of 
+    'this isn\'t very nice'  here backslash means ignore anything after it
+    10+"34"
+    '1034'
+    "34"+10
+    '3410'
+    10-"3"
+    7
+    "3"-10
+    -7
+    "hello"-"bye"
+    NaN
+    10 + + "3"
+    13
+    typeof(+"3")
+    'number'
+    typeof(-"bye")
+    'number'
+    3 = 3 ain't true cause it means assign value 3 to variable 3 but a variable can't start with a number
+    a variable can only start with alphabet of $ or _
+
+    Javascript numbers are always one type:
+    double (64-bit floating point).
+    Accessing a function without () will return the function object instead of the function result.
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+</pre>
+
+</body>
+
+</html>
