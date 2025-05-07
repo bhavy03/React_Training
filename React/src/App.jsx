@@ -17,14 +17,18 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<ProtectRoute />}>
-          <Route path="/" element={<UseRef />} />
+          <Route loader={userinfoloader} path="/" element={<UseRef />} />
           <Route path="in" element={<UseCallback />}></Route>
         </Route>
         <Route path="/login" element={<UseMemo />}></Route>
       </Routes>
-    </BrowserRouter >
+    </BrowserRouter>
   );
 }
-
-export default App
-
+const userinfoloader = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  return response.json();
+};
+// now in the redered element use the loaded data with use of useLoader from routerdom
+// like const data = useLoaderData();
+export default App;
