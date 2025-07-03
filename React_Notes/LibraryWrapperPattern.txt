@@ -1,16 +1,16 @@
 Don't import the whole libraries in react as they take too much space
 // before:
 import _ from 'lodash' -> imported 71.78KB
-
 // after:
 import debounce from "lodash/debounce"; -> imported 3.41KB
 import merge from 'lodash/merge'; -> imported 16KB
 
 now it will be very tideous to manage this for different file in PR as well also.
 so for this use wrapper pattern like this
-
 import debounce from "lodash/debounce"; -> 3.41KB
 const lodashWrapper = {
   debounce
 };
 export default lodashWrapper;
+
+Now we also have to consider which library to import as some may not support direct imports for individual components.
